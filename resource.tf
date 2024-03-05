@@ -7,10 +7,10 @@ resource "rafay_workload_cd_operator" "operator-demo" {
     repo_local_path = "/tmp/application-repo"
     repo_url        = "https://github.com/stephan-rafay/test-tfcd.git"
     repo_branch     = "main"
- #    credentials {
- #     username = "stephan-rafay"
- #     token = "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"
- #   }
+     credentials {
+      username = ""
+      token = ""
+    }
 
     path_match_pattern = "/:project/:namespace/:workload"
     base_path = "common"
