@@ -1,8 +1,8 @@
 terraform {
   required_providers {
     rafay = {
-      source = "app.terraform.io/rafay-test-private/rafay"
-      version = "1.1.25"
+      source = "app.terraform.io/rafay-demo/rafay"
+      version = "1.1.26"
     }
   }
 }
