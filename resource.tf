@@ -1,11 +1,11 @@
 resource "rafay_workload_cd_operator" "operator-demo" {
   metadata {
-    name    = "operator-demo"
-    project = "benny"
+    name    = "workload-cd-demo-1"
+    project = "pravin-demo"
   }
   spec {
     repo_local_path = "/tmp/application-repo"
-    repo_url        = "https://github.com/stephan-rafay/test-tfcd.git"
+    repo_url        = "https://github.com/pravin-rafay/workload-cd-examples.git"
     repo_branch     = "main"
 #    credentials {
 #      username = "stephan-rafay"
@@ -16,11 +16,11 @@ resource "rafay_workload_cd_operator" "operator-demo" {
     base_path = "common"
     //cluster_names = "bb6"
     placement_labels = {
-      "owner" = "myteam"
+      "team" = "team-dev"
     }
 
     include_base_value = true
-    #delete_action = "none"
+    delete_action = "true"
 
   }
   always_run = "${timestamp()}"
